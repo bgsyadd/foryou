@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ada gift online buat lu 💌</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffc0cb; /* Warna pink */
+            text-align: center;
+            flex-direction: column;
+        }
+        .message {
+            font-size: 20px;
+            font-weight: bold;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="message" id="text">📜 Halo! gua punya sesuatu buat lu. Klik tombolnya ya! 🎁</div>
+    <button class="btn" id="nextBtn" onclick="showMessage()">Tekan ini 💖</button>
+
+    <script>
+        const messages = [
+            "Lu kan suka makan",
+            "Gua ada nih makanan buat nemenin belajar lu",
+            "🌯🍱🍜🍲🍫🍭🍦",
+            "Selamat makan 😁",
+            "Ohh iya minumnya kelupaan",
+            "🥛Air putih biar sehat",
+            "Udah makannya??",
+            "Serius serius",
+            "Lu klik lagi deh",
+            "Sekali lagi 😉",
+            "Hallo Ardhaa... 👋😊",
+            "Gua mau ngomong, bolehkan yaa?? 🙈💭",
+            "Gua mau kenalin dulu deh siapa tau lu lupa",
+            "Nama gua Rasyad, lu bisa panggil gua Syad aja",
+            "Gua kuliah di untar, klo lu tau",
+            "dah itu aja, biar lu makin kenal gua",
+            "Coba lu klik deh! 🤭",
+            "Klik lagi! 🤨👉",
+            "Sekali lagi! 😆👌",
+            "Sebelum itu gua mau nanya dulu wkwkw",
+            "Gimana hari ini?? ada yg special??",
+            "Terus upraknya gmn hari ini??",
+            "Gua cuman mau ngomong ini sih... 🤗",
+            "...... 😳",
+            "Semangat yaa ujiannya! 📚🔥",
+            "Jaga kesehatan terus yaaa 🍵",
+            "gua gk mau liat lu sakit...🤒 ",
+            "Makasih yaa udah mau nerima gift dari gua! 🎁🤍",
+            "Itu gua kasih note kecil, udah dibaca kan? 📜",
+            "Gua kemaren mau ngasih es krim, tapi takut cair 🍦😂",
+            "BTW gua liat highlight IG lu yang lu foto sama kucing, lucu banget! 😻",
+            "Lu suka kucing kah?? 𓃠🐾",
+            "Ohh iyaa, gua mau nanya dong ulang tahun lu kapan yaaa?? 🎂👀",
+            "...................... 🤔",
+            "Balesnya lewat IG aja yaaa 📩📱",
+            "Makasih dah mau luangin waktunya buat liat yg gk jelas ini 😜🤣",
+            "see yaaa 👋🏻👋",
+        ];
+        
+        let index = 0;
+        function showMessage() {
+            if (index < messages.length) {
+                document.getElementById("text").innerText = messages[index];
+                index++;
+                if (index >= messages.length) {
+                    document.getElementById("nextBtn").disabled = true;
+                    document.getElementById("nextBtn").innerText = "Selesai 🎉";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
